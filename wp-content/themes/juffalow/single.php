@@ -16,6 +16,8 @@
             the_date('j.m.Y', ' <small>', '</small>');
             echo '</h1>';
             the_content();
+            
+            comments_template( '', true );
         endwhile;
     ?>
     </div>
