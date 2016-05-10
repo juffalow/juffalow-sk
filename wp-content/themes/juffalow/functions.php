@@ -20,6 +20,14 @@ function setup() {
     add_post_type_support('post', 'excerpt');
 }
 
+function use_sessions() {
+    if( !session_id() ) {
+        session_start();
+    }
+}
+
+add_action('init', 'use_sessions');
+
 function add_more_buttons($buttons) {
  $buttons[] = 'hr';
  $buttons[] = 'del';
@@ -32,5 +40,24 @@ function add_more_buttons($buttons) {
  return $buttons;
 }
 add_filter("mce_buttons_3", "add_more_buttons");
+
+function generate_token() {
+    $token = md5(uniqid());
+    $_SESSION['csrf_token'] = $token;
+    return $token;
+}
+
+/**
+ * 
+ * @param type $post_id
+ */
+function check_csrf_token($post_id) {
+    if( !isset($_POST['token']) || !isset($_SESSION['csrf_token']) || $_POST['token'] !== $_SESSION['csrf_token'] ) {
+        header('CSRF: r u f* kidding me?');
+        wp_safe_redirect('/');
+        die();
+    }
+}
+add_action('pre_comment_on_post', 'check_csrf_token');
 
 setup();

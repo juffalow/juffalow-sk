@@ -25,6 +25,7 @@
 <?php endif; ?>
 
 <?php if(comments_open()) : ?>
+    <h4 class="theme-subheading" id="pridat-novy-komentar">Pridať nový komentár</h4>
     <?php if(get_option('comment_registration') && !$user_ID) : ?>
         <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p><?php else : ?>
         <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
@@ -32,6 +33,7 @@
                 <p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Log out &raquo;</a></p>
             <?php else : ?>
                 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+                <input type="hidden" name="token" value="<?php echo generate_token(); ?>" />
                 <div class="form-group">
                     <label for="author">Meno</label>
                     <input type="text" name="author" class="form-control" id="author" placeholder="meno" value="<?php echo $comment_author; ?>" />
