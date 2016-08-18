@@ -20,6 +20,13 @@ I tried a few things - plugins in my old job, but it was really hard to set up a
 
 Every post has its own custom field - alternate language - where is saved the link on the same post in other language. This link is then put in the menu to easily swap between the languages.
 
+## Text
+
+I liked [this post](http://jgthms.com/web-design-in-4-minutes/) about web design so I took over a few things.
+
+General color : #555
+Link color : #680000
+
 ## Known issue
 
 When using Safari browser the content list is not on the right side but it overlays the content. This is [registered issue](https://github.com/twbs/bootstrap/issues/12126) and I will solve it ( or use the recommended solution ) when I have time for it.

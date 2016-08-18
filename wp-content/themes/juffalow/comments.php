@@ -14,7 +14,7 @@
     	<?php foreach($comments as $comment) : ?>
             <div class="media comment">
                 <div class="media-body">
-                    <h4 class="media-heading"><?php comment_author_link(); ?> <small><?php comment_date(); ?> at <?php comment_time(); ?></small></h4>
+                    <h4 class="media-heading"><?php comment_author_link(); ?> <small><?php comment_date(); ?> o <?php comment_time(); ?></small></h4>
                     <?php comment_text(); ?>
                 </div>
             </div>

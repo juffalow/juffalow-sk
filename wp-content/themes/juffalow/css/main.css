@@ -1,10 +1,19 @@
-/* 
+/*
     Created on : Dec 1, 2014, 8:29:53 PM
     Author     : Matej 'juffalow' Jellus <juffalow@juffalow.com>
 */
 html {
   position: relative;
   min-height: 100%;
+}
+.navbar-inverse .navbar-brand {
+  color:white !important;
+}
+.navbar {
+  margin-bottom: 0 !important;
+}
+strong {
+  color: #333;
 }
 .footer {
   bottom: 0;
@@ -19,6 +28,8 @@ html {
 .footer a {
   color: #fff;
   text-decoration: none;
+  padding: 0 5px;
+  transition: color ease 0.5s;
 }
 .footer a:hover {
   color: red;
