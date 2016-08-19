@@ -41,7 +41,7 @@
         </ul>
     </div>
     <div class="col-md-4 col-sm-12">
-        <h4>What I used / am using</h4>
+        <h4>S čím pracujem / som pracoval</h4>
             <style>
               .rig {
                 width: 100%;
@@ -81,6 +81,7 @@
               .contact-list li i {
                 font-size: 1.5em;
                 position: absolute;
+                color: #333;
               }
 
               .contact-list li span {
@@ -188,6 +189,16 @@
                 <li>
                     <a class="rig-cell">
                         <img src="<?php bloginfo('template_directory'); ?>/images/terminal.png" alt="terminal logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/jenkins.png" alt="jenkins logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/golang.png" alt="golang logo" class="rig-img">
                     </a>
                 </li>
                 <li>
