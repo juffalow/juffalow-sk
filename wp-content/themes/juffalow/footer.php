@@ -16,6 +16,56 @@
             </div>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/prettify/prettify.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.lazyload.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        function createContentList() {
+            var twig = [];
+            var i = 0;
+            var isFirst = true;
+            var isFirstSubTheme = true;
+            $(".theme-subheading").each(function() {
+                if( $(this).prop("tagName") === "H2" ) {
+                    if( !isFirstSubTheme ) { twig[i++] = "</ul>"; isFirstSubTheme = true; }
+                    if( !isFirst ) { twig[i++] = "</li>"; }
+                    twig[i++] = "<li><a href=\"#";
+                    twig[i++] = $(this).prop("id");
+                    twig[i++] = "\">";
+                    twig[i++] = $(this).text();
+                    twig[i++] = "</a>";
+                    isFirst = false;
+                }
+
+                if( $(this).prop("tagName") === "H4" ) {
+                    if( isFirstSubTheme ) {
+                        twig[i++] = "<ul class=\"nav nav-stacked\">";
+                        isFirstSubTheme = false;
+                    }
+                    twig[i++] = "<li><a href=\"#";
+                    twig[i++] = $(this).prop("id");
+                    twig[i++] = "\">";
+                    twig[i++] = $(this).text();
+                    twig[i++] = "</a></li>";
+                }
+            });
+            $("#sidebar").append(twig.join(''));
+        }
+        createContentList();
+        $('body').scrollspy({
+            target: '.bs-docs-sidebar',
+            offset: 40
+        });
+        !function ($) {
+          $(function(){
+            window.prettyPrint && prettyPrint();
+          });
+        }(window.jQuery);
+
+        $(function() {
+            $("img.lazy").lazyload({placeholder: "<?php echo get_template_directory_uri(); ?>/images/loader.gif"});
+        });
+    </script>
     </body>
     </html>
-

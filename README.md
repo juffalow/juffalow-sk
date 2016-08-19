@@ -24,8 +24,13 @@ Every post has its own custom field - alternate language - where is saved the li
 
 I liked [this post](http://jgthms.com/web-design-in-4-minutes/) about web design so I took over a few things.
 
-General color : #555
-Link color : #680000
+* general color : #555
+* link color : #680000
+* h1, h2, h3, ..., strong: #333
+
+## Image lazy load
+
+[lazyload](https://github.com/tuupola/jquery_lazyload)
 
 ## Known issue
 
