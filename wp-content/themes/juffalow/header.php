@@ -49,6 +49,8 @@
         <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css" rel="stylesheet">
         <link href="<?php echo get_template_directory_uri(); ?>/css/prettify.css" rel="stylesheet">
+        <link href="<?php echo get_template_directory_uri(); ?>/css/blueimp-gallery.css" rel="stylesheet">
+
         <script src="<?php echo get_template_directory_uri(); ?>/js/webanalytics.js"></script>
         <script>
           if( typeof ga !== "undefined" ) {

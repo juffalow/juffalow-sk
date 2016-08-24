@@ -20,6 +20,9 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/prettify/prettify.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.lazyload.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/blueimp-gallery.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.blueimp-gallery.js"></script>
+
     <script type="text/javascript" charset="utf-8">
         function createContentList() {
             var twig = [];
@@ -67,5 +70,14 @@
             $("img.lazy").lazyload({placeholder: "<?php echo get_template_directory_uri(); ?>/images/loader.gif"});
         });
     </script>
+    <div id="blueimp-gallery" class="blueimp-gallery">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
     </body>
     </html>

@@ -211,6 +211,26 @@
                         <img src="<?php bloginfo('template_directory'); ?>/images/netbeans.png" alt="netbeans logo" class="rig-img">
                     </a>
                 </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/pdepend.png" alt="pdepend logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/phpmessdetector.png" alt="phpmessdetector logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/apache.png" alt="apache logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/laravel.png" alt="laravel logo" class="rig-img">
+                    </a>
+                </li>
               </ul>
             </div>
     </div>
