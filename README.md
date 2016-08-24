@@ -30,7 +30,11 @@ I liked [this post](http://jgthms.com/web-design-in-4-minutes/) about web design
 
 ## Image lazy load
 
-[lazyload](https://github.com/tuupola/jquery_lazyload)
+[tuupola lazyload](https://github.com/tuupola/jquery_lazyload)
+
+## Gallery
+
+[blueimp gallery](https://github.com/blueimp/Gallery)
 
 ## Known issue
 
