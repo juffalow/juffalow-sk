@@ -27,6 +27,11 @@
                     <li>nové, interné, balíčky pre composer, PHPUnit testing</li>
                     <li>širšie oboznámenie sa s Google Analytics a jeho možnosťami</li>
                 </ul>
+                <p><strong>Eset s.r.o.</strong> webdeveloper</p>
+                <ul>
+                    <li>interné webové aplikácie, správa firemných webov</li>
+                    <li>Jenkins + deploy scripty</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -229,6 +234,16 @@
                 <li>
                     <a class="rig-cell">
                         <img src="<?php bloginfo('template_directory'); ?>/images/laravel.png" alt="laravel logo" class="rig-img">
+                    </a>
+                </li>
+                <li class="wide">
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/npm.png" alt="npm logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/bower.svg" alt="bower logo" class="rig-img">
                     </a>
                 </li>
               </ul>
