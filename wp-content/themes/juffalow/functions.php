@@ -7,7 +7,7 @@ require_once('wp_bootstrap_navwalker.php');
 /*
  * Povoli pridanie obrazka ku "post-u"
  */
-add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' );
 
 function setup() {
     /*
@@ -16,7 +16,7 @@ function setup() {
     register_nav_menus( array(
         'primary'   => __( 'Hlavne menu'),
     ) );
-    
+
     add_post_type_support('post', 'excerpt');
 }
 
@@ -27,6 +27,16 @@ function use_sessions() {
 }
 
 add_action('init', 'use_sessions');
+
+function re_rewrite_rules() {
+    global $wp_rewrite;
+    //$wp_rewrite->author_base        = 'autor';
+    //$wp_rewrite->search_base        = 'hladat';
+    //$wp_rewrite->comments_base      = 'komentare';
+    $wp_rewrite->pagination_base    = 'strana';
+    $wp_rewrite->flush_rules();
+}
+add_action('init', 're_rewrite_rules');
 
 function add_more_buttons($buttons) {
  $buttons[] = 'hr';
@@ -48,7 +58,7 @@ function generate_token() {
 }
 
 /**
- * 
+ *
  * @param type $post_id
  */
 function check_csrf_token($post_id) {
