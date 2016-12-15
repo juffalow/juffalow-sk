@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h4>Pracovné skúsenosti</h4>
-                <p><strong>TSS Group a.s.</strong> programátor<br /></p>
+                <p><strong>TSS Group a.s.</strong> programátor</p>
                 <ul>
                     <li>vývoj konfiguračného softvéru pre GPS jednotky, komunikácia cez sériový port, java</li>
                     <li>TCP/IP server na komunikáciu s GPS jednotkami, multithread, java</li>
@@ -39,6 +39,13 @@
                 <ul>
                     <li>React, Flux, webpack, ES6, Babel</li>
                     <li>Android application, Gradle, Fresco na načítanie a zobrazovanie obrázkov</li>
+                </ul>
+                <p><strong>Commander Systems s.r.o.</strong> webdeveloper</p>
+                <ul>
+                    <li>React, Flux, webpack, ES6, Babel</li>
+                    <li>Middleware server v Node.js s frameworkom Express</li>
+                    <li>JWT autentifikácia</li>
+                    <li>Socket.io klient + server pre interný chat</li>
                 </ul>
             </div>
         </div>
@@ -287,6 +294,16 @@
                 <li>
                     <a class="rig-cell">
                         <img src="<?php bloginfo('template_directory'); ?>/images/node.png" alt="node js logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/socketio.gif" alt="socket io logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/yarn.png" alt="yarn logo" class="rig-img">
                     </a>
                 </li>
               </ul>
