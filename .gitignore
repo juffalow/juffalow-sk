@@ -1,7 +1,13 @@
+nbproject/
 /*
-!/wp-content
-!/.gitignore
 
-/wp-content/*
-!/wp-content/themes/
+!wp-content/
+wp-content/*
 
+!wp-content/themes/
+wp-content/themes/*
+
+!wp-content/themes/juffalow/
+
+.DS_Store
+!README.md
