@@ -33,6 +33,14 @@
                     <li>Jenkins + deploy scripty</li>
                 </ul>
             </div>
+            <div class="col-md-12">
+                <h4>Bočné projekty</h4>
+                <p><strong>DiagramArt</strong> programátor<br /></p>
+                <ul>
+                    <li>React, Flux, webpack, ES6, Babel</li>
+                    <li>Android application, Gradle, Fresco na načítanie a zobrazovanie obrázkov</li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="col-md-4 col-sm-12">
@@ -91,6 +99,31 @@
 
               .contact-list li span {
                 margin-left: 2em;
+              }
+
+              @media (min-width: 992px) {
+                  .rig li {
+                    width: 10%;
+                  }
+                  .rig li.wide {
+                    width: 20%;
+                  }
+              }
+              @media (max-width: 992px) {
+                  .rig li {
+                    width: 5%;
+                  }
+                  .rig li.wide {
+                    width: 10%;
+                  }
+              }
+              @media (max-width: 544px) {
+                  .rig li {
+                    width: 10%;
+                  }
+                  .rig li.wide {
+                    width: 20%;
+                  }
               }
             </style>
 
@@ -244,6 +277,16 @@
                 <li>
                     <a class="rig-cell">
                         <img src="<?php bloginfo('template_directory'); ?>/images/bower.svg" alt="bower logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/android.png" alt="android logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/node.png" alt="node js logo" class="rig-img">
                     </a>
                 </li>
               </ul>
