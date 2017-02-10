@@ -27,17 +27,17 @@ function use_sessions() {
 }
 
 add_action('init', 'use_sessions');
-
+/*
 function re_rewrite_rules() {
     global $wp_rewrite;
     //$wp_rewrite->author_base        = 'autor';
     //$wp_rewrite->search_base        = 'hladat';
     //$wp_rewrite->comments_base      = 'komentare';
-    $wp_rewrite->pagination_base    = 'strana';
+    //$wp_rewrite->pagination_base    = 'strana';
     $wp_rewrite->flush_rules();
 }
 add_action('init', 're_rewrite_rules');
-
+*/
 function add_more_buttons($buttons) {
  $buttons[] = 'hr';
  $buttons[] = 'del';
@@ -73,5 +73,16 @@ add_action('pre_comment_on_post', 'check_csrf_token');
  * Remove <p> tag from category description
  */
 remove_filter('term_description','wpautop');
+
+/*
+ * Kvoli strankovaniu / aby poznal v query parameter "strana"
+ */
+function add_query_vars_filter( $vars ){
+  $vars[] = "strana";
+ return $vars;
+}
+
+//Add custom query vars
+add_filter( 'query_vars', 'add_query_vars_filter' );
 
 setup();

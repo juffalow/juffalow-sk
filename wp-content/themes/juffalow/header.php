@@ -8,13 +8,18 @@
             $description = 'Poznamky a rozne materialy k programovaniu a ine veci, ktore ma zaujimaju.';
             $title = get_bloginfo('name');
             $image = 'https://www.juffalow.com/wp-content/uploads/2015/11/juffalow.png';
+            $page = get_query_var('strana', 1);
             $url = get_home_url();
+            $url .= ($page > 1) ? "?strana=$page" : '';
         } else if( is_category() ) {
             $description = category_description();
             $title = single_cat_title('', false) . ' | ' . get_bloginfo('name');
             $image = 'https://www.juffalow.com/wp-content/uploads/2015/11/juffalow.png';
-            $categories = get_the_category();
-            $url = esc_url(get_category_link($categories[0]->term_id));
+            $page = get_query_var('strana', 1);
+            $category = get_term( get_query_var('cat'), 'category' );
+            /* so mad at this solution but :-( */
+            $url = str_replace('/./', '/', esc_url(get_term_link($category->term_id, 'category')));
+            $url .= ($page > 1) ? "?strana=$page" : '';
         } else {
             $description = $post->post_excerpt;
             $title = $post->post_title;

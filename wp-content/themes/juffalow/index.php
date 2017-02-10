@@ -1,15 +1,12 @@
 <?php get_header(); ?>
-<?php if ( is_front_page() ) { ?>
-
-<?php } ?>
 <div class="container">
     <div class="row">
         <div class="col-md-12 article-list">
             <?php
-            $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+            $paged = get_query_var('strana', 1);
             $query_args = array(
                   'post_type' => 'post',
-                  'posts_per_page' => 10,
+                  'posts_per_page' => 7,
                   'paged' => $paged,
                   'page' => $paged
              );
@@ -30,8 +27,8 @@
         </div>
         <?php
         $pagination_args = array(
-          'base'            => get_pagenum_link(1) . '%_%',
-          'format'          => 'strana/%#%',
+          'base'            => remove_query_arg('strana', get_pagenum_link(1)) . '%_%',
+          'format'          => '?strana=%#%',
           'total'           => $the_query->max_num_pages,
           'current'         => $paged,
           'show_all'        => False,
