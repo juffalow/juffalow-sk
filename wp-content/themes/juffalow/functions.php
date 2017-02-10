@@ -69,5 +69,9 @@ function check_csrf_token($post_id) {
     }
 }
 add_action('pre_comment_on_post', 'check_csrf_token');
+/*
+ * Remove <p> tag from category description
+ */
+remove_filter('term_description','wpautop');
 
 setup();

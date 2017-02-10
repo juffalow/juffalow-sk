@@ -3,25 +3,43 @@
     <head>
         <title><?php wp_title( '|', true, 'right' ); echo get_bloginfo('name'); ?></title>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
-        <meta name="keywords" content="java,php,sql,javascript,jquery,programovanie" />
-        <meta name="description" content="<?php if( is_front_page() && is_home() ) { echo 'Poznamky a rozne materialy k programovaniu a ine veci, ktore ma zaujimaju.'; } else { echo $post->post_excerpt; } ?>" />
+        <?php
+        if( is_front_page() && is_home() ) {
+            $description = 'Poznamky a rozne materialy k programovaniu a ine veci, ktore ma zaujimaju.';
+            $title = get_bloginfo('name');
+            $image = 'https://www.juffalow.com/wp-content/uploads/2015/11/juffalow.png';
+            $url = get_home_url();
+        } else if( is_category() ) {
+            $description = category_description();
+            $title = single_cat_title('', false) . ' | ' . get_bloginfo('name');
+            $image = 'https://www.juffalow.com/wp-content/uploads/2015/11/juffalow.png';
+            $categories = get_the_category();
+            $url = esc_url(get_category_link($categories[0]->term_id));
+        } else {
+            $description = $post->post_excerpt;
+            $title = $post->post_title;
+            $image = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+            $image = $image == null ? 'https://www.juffalow.com/wp-content/uploads/2015/11/juffalow.png' : $image;
+            $url = get_permalink();
+        }
+        ?>
+
+        <meta name="description" content="<?php echo $description; ?>" />
         <meta name="robots" content="index, follow">
 
         <meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
-        <meta property="og:title" content="<?php if( is_front_page() && is_home() ) { echo get_bloginfo('name'); } else { echo $post->post_title; } ?>" />
-        <meta property="og:url" content="<?php if( is_front_page() && is_home() ) { echo get_home_url(); } else { echo get_permalink(); } ?>" />
+        <meta property="og:title" content="<?php echo $title; ?>" />
+        <meta property="og:url" content="<?php echo $url; ?>" />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="<?php if( is_front_page() && is_home() ) { echo 'Poznamky a rozne materialy k programovaniu a ine veci, ktore ma zaujimaju.'; } else { echo $post->post_excerpt; } ?>" />
-        <?php $imgSrc = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-        <meta property="og:image" content="<?php echo ($imgSrc != null) ? $imgSrc : 'http://www.juffalow.com/wp-content/uploads/2015/11/juffalow.png'; ?>" />
+        <meta property="og:description" content="<?php echo $description; ?>" />
+        <meta property="og:image" content="<?php echo $image; ?>" />
 
         <meta name="twitter:site" content="@juffalow" />
-        <meta name="twitter:title" content="<?php if( is_front_page() && is_home() ) { echo get_bloginfo('name'); } else { echo $post->post_title; } ?>" />
-        <meta name="twitter:description" content="<?php if( is_front_page() && is_home() ) { echo 'Poznamky a rozne materialy k programovaniu a ine veci, ktore ma zaujimaju.'; } else { echo $post->post_excerpt; } ?>" />
-        <meta name="twitter:image" content="<?php echo ($imgSrc != null) ? $imgSrc : 'http://www.juffalow.com/wp-content/uploads/2015/11/juffalow.png'; ?>" />
+        <meta name="twitter:title" content="<?php echo $title; ?>" />
+        <meta name="twitter:description" content="<?php echo $description; ?>" />
+        <meta name="twitter:image" content="<?php echo $image; ?>" />
 
-
-        <link rel="canonical" href="<?php if( is_front_page() && is_home() ) { echo get_home_url(); } else { echo get_permalink(); } ?>" />
+        <link rel="canonical" href="<?php echo $url; ?>" />
         <link rel="author" href="https://plus.google.com/+MatejJellus" />
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css">
 
@@ -57,12 +75,12 @@
             ga('set', 'contentGroup1', 'slovak');
             <?php
             if(is_front_page() ) {
-                echo "ga('set', 'contentGroup2', 'domovska-stranka');";
+                echo "ga('set', 'contentGroup2', 'domovska-stranka');\n";
             } else if( basename(get_permalink()) === 'kontakt' ) {
-                echo "ga('set', 'contentGroup2', 'kontakt');";
+                echo "ga('set', 'contentGroup2', 'kontakt');\n";
             } else {
                 $categories = get_the_category($post->ID);
-                echo "ga('set', 'contentGroup2', '", $categories[0]->slug, "');";
+                echo "ga('set', 'contentGroup2', '", $categories[0]->slug, "');\n";
             }?>
             ga('send', 'pageview');
           }
