@@ -38,7 +38,7 @@
                 <p><strong>DiagramArt</strong> programátor<br /></p>
                 <ul>
                     <li>React, Flux, webpack, ES6, Babel</li>
-                    <li>Android application, Gradle, Fresco na načítanie a zobrazovanie obrázkov</li>
+                    <li>Android application, Gradle, Fresco na načítanie a zobrazovanie obrázkov, BottomBar pre navigáciu a FragNav na organizáciu fragmentov</li>
                 </ul>
                 <p><strong>Commander Systems s.r.o.</strong> webdeveloper</p>
                 <ul>
@@ -322,8 +322,8 @@
                     </a>
                 </li>
               </ul>
-            </div>
-    </div>
+          </div>
+      </div>
 </div>
 
 <?php get_footer(); ?>

@@ -1,5 +1,5 @@
-<?php if(!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) : ?>  	
-	<?php die('You can not access this page directly!'); ?>  
+<?php if(!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) : ?>
+	<?php die('You can not access this page directly!'); ?>
 <?php endif; ?>
 <h4 class="theme-subheading" id="komentare">Komentáre</h4>
 
@@ -10,7 +10,7 @@
 <?php endif; ?>
 
 <?php if($comments) : ?>
-        
+
     	<?php foreach($comments as $comment) : ?>
             <div class="media comment">
                 <div class="media-body">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         <?php endforeach; ?>
-        
+
 <?php else : ?>
 	<p>Zatiaľ neboli pridané žiadne komentáre.</p>
 <?php endif; ?>
@@ -38,12 +38,17 @@
                     <label for="author">Meno</label>
                     <input type="text" name="author" class="form-control" id="author" placeholder="meno" value="<?php echo $comment_author; ?>" />
                 </div>
-                 
+
                 <div class="form-group">
                     <label for="email">E-mail</label>
                     <input type="text" name="email" class="form-control" id="email" placeholder="e-mail" value="<?php echo $comment_author_email; ?>" />
                 </div>
-                
+
+                <div class="form-group comment-protection">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="secondary-email" class="form-control" id="secondary-email" placeholder="e-mail" value="" />
+                </div>
+
                 <div class="form-group">
                     <label for="url">Web</label>
                     <input type="text" name="url" class="form-control" id="url" placeholder="url" value="<?php echo $comment_author_url; ?>" />
@@ -55,7 +60,7 @@
             </div>
 
             <button type="submit" class="btn btn-default">Pridať</button>
-            
+
             <?php do_action('comment_form', $post->ID); ?>
         </form>
     <?php endif; ?>

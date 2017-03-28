@@ -9,6 +9,9 @@ html {
 body {
   margin-bottom: 70px !important;
 }
+.comment-protection {
+    display: none;
+}
 .navbar-inverse .navbar-brand {
   color:white !important;
 }

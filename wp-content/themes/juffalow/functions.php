@@ -69,6 +69,16 @@ function check_csrf_token($post_id) {
     }
 }
 add_action('pre_comment_on_post', 'check_csrf_token');
+
+function check_honeypot() {
+    if( isset($_POST['secondary-email']) && !empty($_POST['secondary-email']) ) {
+        header('honeypot: r u f* kidding me?');
+        wp_safe_redirect('/');
+        die();
+    }
+}
+
+add_action('pre_comment_on_post', 'check_honeypot');
 /*
  * Remove <p> tag from category description
  */
