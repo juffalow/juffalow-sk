@@ -321,6 +321,11 @@
                         <img src="<?php bloginfo('template_directory'); ?>/images/chai-logo.png" alt="chai js logo" class="rig-img">
                     </a>
                 </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/graphql.png" alt="graphql logo" class="rig-img">
+                    </a>
+                </li>
               </ul>
           </div>
       </div>
