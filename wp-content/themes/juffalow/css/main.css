@@ -55,6 +55,20 @@ strong {
   font-size: 2em;
   width: 30px;
 }
+.footer-info {
+    list-style: none;
+    padding: 0;
+}
+.footer-info > li {
+    display: inline-block;
+}
+.footer-info > li:after {
+    content: ' |';
+    margin: 0px 5px 0px 5px;
+}
+.footer-info > li:last-child:after {
+    content: '';
+}
 .comment {
   padding: 10px 10px 0px 10px;
 }

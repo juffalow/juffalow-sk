@@ -4,7 +4,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
-                    <span>Matej <small>'juffalow'</small> Jellus  |  <i class="fa fa-wordpress"></i>ordPress  |  2015</span>
+                    <ul class="footer-info">
+                        <li>Matej <small>'juffalow'</small> Jellus</li>
+                        <li><i class="fa fa-wordpress"></i>ordPress</li>
+                        <li>2015 - 2017</li>
+                    </ul>
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <span class="social">

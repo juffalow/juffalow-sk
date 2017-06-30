@@ -1,7 +1,8 @@
 <?php if(!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) : ?>
 	<?php die('You can not access this page directly!'); ?>
 <?php endif; ?>
-<h4 class="theme-subheading" id="komentare">Komentáre</h4>
+<hr />
+<h2 class="theme-subheading" id="komentare">Komentáre</h4>
 
 <?php if(!empty($post->post_password)) : ?>
   	<?php if($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) : ?>

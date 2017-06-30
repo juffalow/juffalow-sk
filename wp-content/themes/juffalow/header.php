@@ -46,7 +46,7 @@
 
         <link rel="canonical" href="<?php echo $url; ?>" />
         <link rel="author" href="https://plus.google.com/+MatejJellus" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css?v=1.0.1">
 
         <?php
 
