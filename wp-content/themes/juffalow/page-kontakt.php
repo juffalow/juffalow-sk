@@ -30,15 +30,18 @@
                 <p><strong>Eset s.r.o.</strong> webdeveloper</p>
                 <ul>
                     <li>interné webové aplikácie, správa firemných webov</li>
-                    <li>Jenkins + deploy scripty</li>
+                    <li>PHP, Slim, FatFree, WordPress, Laravel Eloquent</li>
+                    <li>jQuery UI / Widget Factory, CSS Bootstrap / PureCSS</li>
+                    <li>Jenkins, deploy scripty - test / produkcia, syntax kontrola, spustanie testov, vytvaranie / tagovanie novych verzii</li>
+                    <li>java aplikacia, komunikacia s MSSQL a Windows Auth, Google Gson, Adobe Cloud APIs</li>
                 </ul>
             </div>
             <div class="col-md-12">
                 <h4>Bočné projekty</h4>
-                <p><strong>DiagramArt</strong> programátor<br /></p>
+                <p><strong>DiagramArt</strong> programátor</p>
                 <ul>
-                    <li>React, Flux, webpack, ES6, Babel</li>
-                    <li>Android application, Gradle, Fresco na načítanie a zobrazovanie obrázkov, BottomBar pre navigáciu a FragNav na organizáciu fragmentov</li>
+                    <li>Web Widget, React, Flux, webpack, ES6, Babel</li>
+                    <li>Android application, Gradle, Fresco na načítanie a zobrazovanie obrázkov, BottomBar pre navigáciu a FragNav na organizáciu fragmentov, SQLite, Repository pattern</li>
                 </ul>
                 <p><strong>Commander Systems s.r.o.</strong> webdeveloper</p>
                 <ul>
@@ -46,6 +49,7 @@
                     <li>Middleware server v Node.js s frameworkom Express</li>
                     <li>JWT autentifikácia</li>
                     <li>Socket.io klient + server pre interný chat</li>
+                    <li>Unit testy pomocou Chai, Sinon, Mocha</li>
                 </ul>
             </div>
         </div>
@@ -324,6 +328,21 @@
                 <li>
                     <a class="rig-cell">
                         <img src="<?php bloginfo('template_directory'); ?>/images/graphql.png" alt="graphql logo" class="rig-img">
+                    </a>
+                </li>
+                <li class="wide">
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/babel.png" alt="babel logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/sqlite.png" alt="sqlite logo" class="rig-img">
+                    </a>
+                </li>
+                <li>
+                    <a class="rig-cell">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/gulp.png" alt="gulp logo" class="rig-img">
                     </a>
                 </li>
               </ul>

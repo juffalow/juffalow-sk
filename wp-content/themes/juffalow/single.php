@@ -28,7 +28,7 @@
                     <div class="col-md-6 col-xs-12">
                         <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><h5><?php the_title(); ?></h5></a>
                         <p><?php the_excerpt() ?></p>
-                        <p class="text-right"><a href="<?php the_permalink() ?>">Čítať viac</a></p>
+                        <p class="text-right"><a href="<?php the_permalink() ?>" class="btn btn-default" role="button">Čítať viac</a></p>
                     </div>
                 <?php } wp_reset_postdata(); ?>
                 </div>

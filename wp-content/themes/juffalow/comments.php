@@ -2,7 +2,7 @@
 	<?php die('You can not access this page directly!'); ?>
 <?php endif; ?>
 <hr />
-<h2 class="theme-subheading" id="komentare">Komentáre</h4>
+<h2 class="theme-subheading" id="komentare">Komentáre</h2>
 
 <?php if(!empty($post->post_password)) : ?>
   	<?php if($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) : ?>

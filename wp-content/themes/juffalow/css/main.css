@@ -57,7 +57,7 @@ strong {
 }
 .footer-info {
     list-style: none;
-    padding: 0;
+    padding: 20px 0 0 0;
 }
 .footer-info > li {
     display: inline-block;
