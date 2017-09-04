@@ -57,11 +57,12 @@
     <div class="col-md-4 col-sm-12">
         <h4>Kontakt</h4>
         <ul class="list-group contact-list">
-            <li class="list-group-item"><i class="fa fa-skype"></i> <span>juffalow</span></li>
-            <li class="list-group-item"><i class="fa fa-facebook"></i> <span>Matej z Puchova</span></li>
-            <li class="list-group-item"><i class="fa fa-envelope-o"></i> <span>juffalow@juffalow.com</span></li>
-            <li class="list-group-item"><i class="fa fa-twitter"></i> <span>@juffalow</span></li>
-            <li class="list-group-item"><i class="fa fa-github"></i> <span>juffalow</span></li>
+            <li class="list-group-item"><i class="fa fa-skype"></i> <span><a href="skype:juffalow?userinfo">juffalow</a></span></li>
+            <li class="list-group-item"><i class="fa fa-facebook"></i> <span><a href="https://www.facebook.com/juffalow.page/">juffalow</a></span></li>
+            <li class="list-group-item"><i class="fa fa-envelope-o"></i> <span><a href="mailto:juffalow@juffalow.com">juffalow@juffalow.com</a></span></li>
+            <li class="list-group-item"><i class="fa fa-twitter"></i> <span><a href="https://twitter.com/juffalow">@juffalow</a></span></li>
+            <li class="list-group-item"><i class="fa fa-github"></i> <span><a href="https://github.com/juffalow">juffalow</a></span></li>
+            <li class="list-group-item"><i class="fa fa-instagram"></i> <span><a href="https://www.instagram.com/juffalow/">juffalow</a></span></li>
         </ul>
     </div>
     <div class="col-md-4 col-sm-12">

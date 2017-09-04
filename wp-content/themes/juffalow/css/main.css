@@ -30,6 +30,9 @@ a:hover > h3 {
 strong {
   color: #333;
 }
+ul.navbar-nav.navbar-right > li > a {
+    font-size: 1.3em;
+}
 .footer {
   position: absolute;
   bottom: 0;
@@ -52,7 +55,7 @@ strong {
 }
 .footer .social .fa {
   display: inline-block;
-  font-size: 2em;
+  font-size: 1.3em;
   width: 30px;
 }
 .footer-info {

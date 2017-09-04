@@ -46,7 +46,7 @@
 
         <link rel="canonical" href="<?php echo $url; ?>" />
         <link rel="author" href="https://plus.google.com/+MatejJellus" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css?v=1.0.3">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css?v=1.0.4">
 
         <?php
 
@@ -69,8 +69,9 @@
         ?>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css" rel="stylesheet">
+        <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css?v=1.0.1" rel="stylesheet">
+        <!-- <link href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link href="<?php echo get_template_directory_uri(); ?>/css/prettify.css" rel="stylesheet">
         <link href="<?php echo get_template_directory_uri(); ?>/css/blueimp-gallery.css" rel="stylesheet">
 
@@ -120,19 +121,18 @@
                 );
             ?>
 
-            <?php if( is_front_page() && is_home() ) { ?>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="http://en.juffalow.com" style="padding-top: 10px; padding-bottom: 10px;"><img src="/wp-includes/images/english.png" alt="english language" width="32" /></a></li>
-                    </ul>
-            <?php } else if( $enLink !== null ) {?>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="<?php echo $enLink[0]; ?>" style="padding-top: 10px; padding-bottom: 10px;"><img src="/wp-includes/images/english.png" alt="english language" width="32" /></a></li>
-                    </ul>
-            <?php } else if( $skLink !== null ) { ?>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="<?php echo $skLink[0]; ?>" style="padding-top: 10px; padding-bottom: 10px;"><img src="/wp-includes/images/slovak.png" alt="slovak language" width="32" /></a></li>
-                    </ul>
-            <?php } ?>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://www.facebook.com/juffalow.page"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/juffalow"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://github.com/juffalow"><i class="fa fa-github"></i></a></li>
+                <?php if( is_front_page() && is_home() ) { ?>
+                    <li><a href="http://en.juffalow.com" style="padding-top: 10px; padding-bottom: 10px;"><img src="/wp-includes/images/english.png" alt="english language" width="32" /></a></li>
+                <?php } else if( $enLink !== null ) {?>
+                    <li><a href="<?php echo $enLink[0]; ?>" style="padding-top: 10px; padding-bottom: 10px;"><img src="/wp-includes/images/english.png" alt="english language" width="32" /></a></li>
+                <?php } else if( $skLink !== null ) { ?>
+                    <li><a href="<?php echo $skLink[0]; ?>" style="padding-top: 10px; padding-bottom: 10px;"><img src="/wp-includes/images/slovak.png" alt="slovak language" width="32" /></a></li>
+                <?php } ?>
+            </ul>
 			</div>
         </div>
     </nav>
