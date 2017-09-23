@@ -3,6 +3,7 @@
  * Aby sa menu generovalo v sulade s bootstrapom
  */
 require_once('wp_bootstrap_navwalker.php');
+require_once('recaptchalib.php');
 
 /*
  * Povoli pridanie obrazka ku "post-u"
@@ -79,6 +80,26 @@ function check_honeypot() {
 }
 
 add_action('pre_comment_on_post', 'check_honeypot');
+
+function check_recaptcha() {
+    $reCaptcha = new ReCaptcha('6LcBPi8UAAAAAETdQyLFAI8SqjxWXlRRLXm-wkIp');
+    if ($_POST["g-recaptcha-response"]) {
+        $resp = $reCaptcha->verifyResponse(
+            $_SERVER["REMOTE_ADDR"],
+            $_POST["g-recaptcha-response"]
+        );
+
+        if( $resp != null && $resp->success ) {
+            return 0;
+        }
+    }
+
+    wp_safe_redirect('/');
+    die();
+}
+
+add_action('pre_comment_on_post', 'check_recaptcha');
+
 /*
  * Remove <p> tag from category description
  */

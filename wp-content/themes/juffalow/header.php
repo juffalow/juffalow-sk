@@ -5,7 +5,7 @@
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <?php
         if( is_front_page() && is_home() ) {
-            $description = 'Poznamky a rozne materialy k programovaniu a ine veci, ktore ma zaujimaju.';
+            $description = 'Programátor, IT nadšenec, Web Developer, Blogger, cestovateľ a milovník jedla';
             $title = get_bloginfo('name');
             $image = 'https://www.juffalow.com/wp-content/uploads/2015/11/juffalow.png';
             $page = get_query_var('strana', 1);

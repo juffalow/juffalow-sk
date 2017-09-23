@@ -60,6 +60,9 @@
                 <textarea name="comment" id="comment" class="form-control" rows="5"></textarea>
             </div>
 
+            <div class="g-recaptcha" data-sitekey="6LcBPi8UAAAAAPMeiaH47znAz09DZlmIbTo0RaHw"></div>
+            <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=sk"></script>
+
             <button type="submit" class="btn btn-default">Pridať</button>
 
             <?php do_action('comment_form', $post->ID); ?>
