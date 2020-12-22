@@ -91,6 +91,7 @@
             ga('send', 'pageview');
           }
         </script>
+        <?php wp_head(); ?>
     </head>
     <body>
 

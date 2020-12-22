@@ -116,4 +116,12 @@ function add_query_vars_filter( $vars ){
 //Add custom query vars
 add_filter( 'query_vars', 'add_query_vars_filter' );
 
+remove_action('wp_head', 'wp_generator');
+
+function remove_wp_version_rss() {
+  return '';
+}
+
+add_filter('the_generator','remove_wp_version_rss');
+
 setup();
